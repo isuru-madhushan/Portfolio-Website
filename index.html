@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>0xDarkX</title>
+
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0a0c10" />
+    <link rel="icon" href="assets/title_0xDarkX.png" />
+
+    <!-- Apply saved theme before paint to avoid flash -->
+    <script>
+        (function() {
+            try {
+                var t = localStorage.getItem('theme');
+                if (t) document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {}
+        })();
+    </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("8yRf37y4UkBAtEF6L");
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <script defer src="https://friconix.com/cdn/friconix.js">
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <!-- Use your image logo -->
+            <a href="#home" class="brand-logo" aria-label="0xDARK">
+                <img id="brandLogo" src="assets/0xDarkX.png" data-logo-dark="assets/0xDarkX.png" data-logo-light="assets/0xDarkX_dark.png" alt="0xDARK logo" />
+            </a>
+            <!-- If you want text logo instead, replace the block above with: <a href="#home" class="logo">0xDARK</a> -->
+
+            <nav class="menu" aria-label="Main Navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#ctia">CTIA Reports</a>
+                <a href="#contact">Contact</a>
+                <a class="btn small" href="assets/YourName_CV.pdf" download>Download CV</a>
+                <button id="themeToggle" class="icon-btn theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+                <i class="ri-moon-line"></i>
+                </button>
+            </nav>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#ctia">CTIA Reports</a>
+            <a href="#contact">Contact</a>
+            <a class="btn small" href="assets/YourName_CV.pdf" download>Download CV</a>
+            <button id="themeToggleMobile" class="icon-btn theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+        <i class="ri-moon-line"></i>
+      </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container hero-inner">
+
+            <div class="hero-content">
+                <div class="hero-title">
+                    <p class="eyebrow"><span>CYBER SECURITY ANALYST</span> & PENTESTER</p>
+                    <h1>Find vulnerabilities</h1>
+                    <h1 class="red">Reduce risk</h1>
+                </div>
+                <div class="sub">
+                    <p>
+                        I’m Isuru Madhushan, I perform web and cloud pentests, build detections and publish CTIA (Cyber Threat Intelligence) reports that turn signals into action.
+                    </p>
+                </div>
+                <div class="cta">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#ctia" class="btn">CTIA Reports</a>
+                    <a href="assets/YourName_CV.pdf" class="btn ghost" download>Download CV</a>
+
+                </div>
+
+                <ul class="hero-tags">
+                    <li>Web Pentest</li>
+                    <li>Threat Hunting</li>
+                    <li>Incident Response</li>
+                    <li>CTIA Reports</li>
+                    <li>Monitoring</li>
+                </ul>
+
+                <div class="hero-highlights">
+                    <div class="hgl">
+                        <i class="ri-bug-line"></i>
+                        <div>
+                            <strong>Threat Hunting & Detection</strong>
+                            <p>Proactively find threats using FortiSIEM, Stellar Cyber, LogRhythm, and CrowdStrike EDR.</p>
+                        </div>
+                    </div>
+                    <div class="hgl">
+                        <i class="ri-shield-keyhole-line"></i>
+                        <div>
+                            <strong>Incident Response</strong>
+                            <p>Analyze, contain, and investigate attacks with FortiSIEM, LogRhythm, and CrowdStrike.</p>
+                        </div>
+                    </div>
+                    <div class="hgl">
+                        <i class="ri-file-search-line"></i>
+                        <div>
+                            <strong>Security Operations</strong>
+                            <p>Manage and monitor security tools (SIEMs & EDR) for a unified defense.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/isuru-madhushan/" aria-label="LinkedIn" class="social-btn" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                    <a href="https://github.com/isuru-madhushan" aria-label="GitHub" class="social-btn" target="_blank"><i class="ri-github-fill"></i></a>
+                    <a href="https://tryhackme.com/p/0xDarkX" aria-label="TryHackMe" class="social-btn" target="_blank"><i class="fi-xnsuxl-tryhackme"></i></a>
+                    <!--<a href="https://app.hackthebox.com/profile/2012771" aria-label="Hack The Box" target="_blank">Hack The Box</a>-->
+                </div>
+            </div>
+            <div class="hero-photo">
+                <img src="assets/output - Edited.png" alt="Monitors displaying code and logs">
+            </div>
+        </div>
+
+        <span class="hero-blob one"></span>
+        <span class="hero-blob two"></span>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container about">
+            <div class="about-photo">
+                <img src="assets/new.png" alt="Analyst at workstation with dashboards" loading="lazy" decoding="async" sizes="(min-width: 980px) 45vw, 90vw">
+            </div>
+            <div class="about-content">
+                <h2 class="about-title">About <span>Me</span></h2>
+                <p>I am a cybersecurity analyst with a strong focus on web and cloud offensive testing, blue team detection engineering, incident response and cyber threat intelligence (CTIA) reporting. I specialize in translating complex technical findings
+                    into clear prioritized remediation strategies that drive action. Currently pursuing a Bachelor's degree in Computer Networks and Cybersecurity at KIU, I am deeply passionate about protecting digital systems and infrastructures from
+                    evolving threats. My experience spans hands on cybersecurity labs, CTF competitions and realistic network simulations. I’m eager to contribute my technical skills, analytical mindset and commitment to continuous learning to a forward-thinking
+                    security team.</p>
+                <ul class="badges">
+                    <li>Pen Testing</li>
+                    <li>Threat Hunting</li>
+                    <li>Incident Response</li>
+                    <li>XDR (Stellar Cyber)</li>
+                    <li>EDR (Crowdstrike)</li>
+                    <li>SIEM (LogRhythm/Fortisiem)</li>
+                    <li>Python</li>
+                    <li>MITRE ATT&CK</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <div class="stats">
+                    <div><strong>2+</strong><span>Months in Security</span></div>
+                    <div><strong>0+</strong><span>Engagements</span></div>
+                    <div><strong>5</strong><span>Certifications</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects (GitHub repos on click) -->
+    <section class="section" id="projects" data-limit="6" data-step="6">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="CTIA-title">Security Projects & <span>Academic Research</span></h2>
+                <p>A showcase of my technical work, including cybersecurity tools, web applications, CTF challenges and research-based projects. Each project reflects hands-on experience, problem-solving skills and a passion for building secure and efficient
+                    systems.
+                </p>
+            </div>
+
+            <div class="filters" role="tablist" aria-label="Project Filters">
+                <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button class="chip" data-filter="red" role="tab">CTF</button>
+                <button class="chip" data-filter="web" role="tab">Web</button>
+                <button class="chip" data-filter="research" role="tab">Research</button>
+                <button class="chip" data-filter="network" role="tab">Network</button>
+            </div>
+
+            <div class="masonry">
+                <article class="box" data-category="web">
+                    <div class="item">
+                        <img src="assets/project 1.png" data-repo="https://github.com/yourname/ad-privesc-lab" alt="AD PrivEsc chain" loading="lazy" decoding="async" />
+                        <div class="overlay">
+                            <ul class="tool-badges">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-title">
+                        <p>Portfolio Website</p>
+                    </div>
+                </article>
+
+                <article class="box" data-category="red">
+                    <div class="item" data-category="red">
+                        <img src="assets/project 2.png" data-repo="https://github.com/yourname/threat-hunt-lateral-movement" alt="Threat hunt dashboards" loading="lazy" decoding="async" />
+                        <div class="overlay">
+                            <ul class="tool-badges">
+                                <li>Metasploit</li>
+                                <li>Nmap</li>
+                                <li>Linux</li>
+                                <li>Netcat</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>Metasploitable 2 Walkthrough</p>
+                    </div>
+                </article>
+
+                <article class="box" data-category="research">
+                    <div class="item">
+                        <img src="assets/project 3.jpg" data-link="https://github.com/yourname/owasp-audit" alt="Source code review" loading="lazy" decoding="async" />
+                        <div class="overlay">
+                            <ul class="tool-badges">
+                                <li>Web Extention</li>
+                                <li>Pishtank</li>
+                                <li>URLhus</li>
+                                <li>Virus Total</li>
+                                <li>AbuseIPDB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>AI-Driven Real-Time Phishing Detection System via Browser Extension Using Machine Learning</p>
+                    </div>
+                </article>
+
+                <article class="box" data-category="web">
+                    <div class="item">
+                        <img src="assets/project 4.png" data-repo="https://github.com/yourname/aws-iam-guardduty" alt="Cloud console view" loading="lazy" decoding="async" />
+                        <div class="overlay">
+                            <ul class="tool-badges">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>Prototype-Nexus - Online Job Portal</p>
+                    </div>
+                </article>
+
+                <article class="box" data-category="red">
+                    <div class="item">
+                        <img src="assets/project 5.png" data-repo="https://github.com/yourname/ransomware-triage" alt="Malware triage" loading="lazy" decoding="async" />
+                        <div class="overlay">
+                            <ul class="tool-badges">
+                                <li>Linux</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>OverTheWire Bandit CTF</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="see-more">
+                <button class="btn ghost see-more-btn" aria-expanded="false">See more</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTI Reports (download only) -->
+    <section class="section" id="ctia" data-limit="6" data-step="6">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="CTIA-title">CTIA <span>Reports</span></h2>
+                <p>Daily threat intelligence reports focused on emerging cyber threats, attack trends and IOCs. Each report is built with real-time analysis, helping enhance detection strategies and strengthen defensive capabilities.</p>
+            </div>
+
+            <div class="filters" role="tablist" aria-label="CTI Filters">
+                <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button class="chip" data-filter="malware" role="tab">Malware</button>
+                <button class="chip" data-filter="vuln" role="tab">Vulnerbility</button>
+                <button class="chip" data-filter="zeroday" role="tab">Zero-Day</button>
+                <button class="chip" data-filter="other" role="tab">Other</button>
+            </div>
+
+            <div class="masonry">
+                <article class="box" data-category="malware">
+                    <div class="item">
+                        <img src="assets/reports/img/img 1.png" data-link="https://drive.google.com/file/d/1zegg0MEtW3a9xj0oyG6p_u7uVIl128mU" data-cover="assets/reports/img/img 1.png" data-summary="Attack paths across IAM roles, S3, and EC2 metadata.|Over‑privileged roles allow pivot to S3.|EC2 IMDSv1 exposure aids credential theft.|Mitigation & detections included."
+                            data-tags="Cloud, IAM, S3, EC2, MITRE TA0004" data-cta="Open PDF" alt="Cloud Attack Paths" loading="lazy" decoding="async" />
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>loud Attack Paths</p>
+                    </div>
+                </article>
+                <article class="box" data-category="malware">
+                    <div class="item">
+                        <img src="assets/reports/img/img 1.png" data-link="https://drive.google.com/file/d/1zegg0MEtW3a9xj0oyG6p_u7uVIl128mU" data-cover="assets/reports/img/img 1.png" data-summary="Attack paths across IAM roles, S3, and EC2 metadata.|Over‑privileged roles allow pivot to S3.|EC2 IMDSv1 exposure aids credential theft.|Mitigation & detections included."
+                            data-tags="Cloud, IAM, S3, EC2, MITRE TA0004" data-cta="Open PDF" alt="Cloud Attack Paths" loading="lazy" decoding="async" />
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>loud Attack Paths</p>
+                    </div>
+                </article>
+                <article class="box" data-category="malware">
+                    <div class="item">
+                        <img src="assets/reports/img/img 1.png" data-link="https://drive.google.com/file/d/1zegg0MEtW3a9xj0oyG6p_u7uVIl128mU" data-cover="assets/reports/img/img 1.png" data-summary="Attack paths across IAM roles, S3, and EC2 metadata.|Over‑privileged roles allow pivot to S3.|EC2 IMDSv1 exposure aids credential theft.|Mitigation & detections included."
+                            data-tags="Cloud, IAM, S3, EC2, MITRE TA0004" data-cta="Open PDF" alt="Cloud Attack Paths" loading="lazy" decoding="async" />
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>loud Attack Paths</p>
+                    </div>
+                </article>
+                <article class="box" data-category="malware">
+                    <div class="item">
+                        <img src="assets/reports/img/img 1.png" data-link="https://drive.google.com/file/d/1zegg0MEtW3a9xj0oyG6p_u7uVIl128mU" data-cover="assets/reports/img/img 1.png" data-summary="Attack paths across IAM roles, S3, and EC2 metadata.|Over‑privileged roles allow pivot to S3.|EC2 IMDSv1 exposure aids credential theft.|Mitigation & detections included."
+                            data-tags="Cloud, IAM, S3, EC2, MITRE TA0004" data-cta="Open PDF" alt="Cloud Attack Paths" loading="lazy" decoding="async" />
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>loud Attack Paths</p>
+                    </div>
+                </article>
+                <article class="box" data-category="malware">
+                    <div class="item">
+                        <img src="assets/reports/img/img 1.png" data-link="https://drive.google.com/file/d/1zegg0MEtW3a9xj0oyG6p_u7uVIl128mU" data-cover="assets/reports/img/img 1.png" data-summary="Attack paths across IAM roles, S3, and EC2 metadata.|Over‑privileged roles allow pivot to S3.|EC2 IMDSv1 exposure aids credential theft.|Mitigation & detections included."
+                            data-tags="Cloud, IAM, S3, EC2, MITRE TA0004" data-cta="Open PDF" alt="Cloud Attack Paths" loading="lazy" decoding="async" />
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>loud Attack Paths</p>
+                    </div>
+                </article>
+                <article class="box" data-category="malware">
+                    <div class="item">
+                        <img src="assets/reports/img/img 1.png" data-link="https://drive.google.com/file/d/1zegg0MEtW3a9xj0oyG6p_u7uVIl128mU" data-cover="assets/reports/img/img 1.png" data-summary="Attack paths across IAM roles, S3, and EC2 metadata.|Over‑privileged roles allow pivot to S3.|EC2 IMDSv1 exposure aids credential theft.|Mitigation & detections included."
+                            data-tags="Cloud, IAM, S3, EC2, MITRE TA0004" data-cta="Open PDF" alt="Cloud Attack Paths" loading="lazy" decoding="async" />
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>loud Attack Paths</p>
+                    </div>
+                </article>
+                </article>
+                <article class="box" data-category="malware">
+                    <div class="item">
+                        <img src="assets/reports/img/img 1.png" data-link="https://drive.google.com/file/d/1zegg0MEtW3a9xj0oyG6p_u7uVIl128mU" data-cover="assets/reports/img/img 1.png" data-summary="Attack paths across IAM roles, S3, and EC2 metadata.|Over‑privileged roles allow pivot to S3.|EC2 IMDSv1 exposure aids credential theft.|Mitigation & detections included."
+                            data-tags="Cloud, IAM, S3, EC2, MITRE TA0004" data-cta="Open PDF" alt="Cloud Attack Paths" loading="lazy" decoding="async" />
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>loud Attack Paths</p>
+                    </div>
+                </article>
+                </article>
+                <article class="box" data-category="malware">
+                    <div class="item">
+                        <img src="assets/reports/img/img 1.png" data-link="https://drive.google.com/file/d/1zegg0MEtW3a9xj0oyG6p_u7uVIl128mU" data-cover="assets/reports/img/img 1.png" data-summary="Attack paths across IAM roles, S3, and EC2 metadata.|Over‑privileged roles allow pivot to S3.|EC2 IMDSv1 exposure aids credential theft.|Mitigation & detections included."
+                            data-tags="Cloud, IAM, S3, EC2, MITRE TA0004" data-cta="Open PDF" alt="Cloud Attack Paths" loading="lazy" decoding="async" />
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-title" data-category="red">
+                        <p>loud Attack Paths</p>
+                    </div>
+                </article>
+
+            </div>
+            <div class="see-more">
+                <button class="btn ghost see-more-btn" aria-expanded="false">See more</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <!-- Contact (styled like the reference) -->
+    <!-- Contact (dark, glossy) -->
+    <section class="section contact-hero" id="contact">
+        <div class="contact-stage container">
+            <div class="contact-card-hero">
+                <!-- Vertical action rail -->
+                <aside class="contact-rail" aria-label="Quick actions">
+                    <a href="#home" class="rail-btn" title="Home"><i class="ri-home-5-line"></i></a>
+                    <a href="mailto:you@example.com" class="rail-btn" title="Email"><i class="ri-mail-line"></i></a>
+                    <a href="tel:+1234567890" class="rail-btn" title="Call"><i class="ri-phone-line"></i></a>
+                </aside>
+
+                <!-- Left: text + form -->
+                <div class="contact-left">
+                    <h2 class="contact-title">Let’s <span>talk</span></h2>
+                    <p class="contact-lead">
+                        I am a Security Analyst available for hire in cybersecurity projects, including penetration testing, CTI reporting, monitoring and consultancy. I provide threat intelligence reports, security assessments and clear remediation guidance. Feel free to reach
+                        out for collaborations, freelance work or security-focused projects, I’ll reply within 24 hours.
+                    </p>
+
+                    <form class="contact-form" action="#">
+                        <div class="cf-grid">
+                            <input type="text" id="name" placeholder="Your Name" required />
+                            <input type="email" id="email" placeholder="Your Email" required />
+                        </div>
+                        <input type="text" id="subject" placeholder="Subject" />
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button class="btn cf-submit" onclick="sendMail()">
+                        <i class="ri-send-plane-2-line"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: blob image -->
+                <div class="contact-right">
+                    <div class="blob-wrap">
+                        <img src="assets/output - Edited.png" alt="Let’s talk" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- In‑page PDF Viewer -->
+    <div id="pdfViewer" class="pdf-viewer" aria-modal="true" role="dialog" aria-label="CTI Report viewer">
+        <div class="pdf-inner">
+            <div class="pdf-header">
+                <span class="pdf-title">CTI Report</span>
+                <div class="pdf-actions">
+                    <a id="pdfOpenTab" class="icon-btn" target="_blank" title="Open in new tab" aria-label="Open in new tab">
+                        <i class="ri-external-link-line"></i>
+                    </a>
+                    <button id="pdfClose" class="icon-btn" title="Close" aria-label="Close viewer">
+            <i class="ri-close-line"></i>
+          </button>
+                </div>
+            </div>
+            <iframe id="pdfFrame" src="" title="PDF file" loading="lazy"></iframe>
+            <!-- Summary/notice content is injected here by JS as .pdf-notice -->
+        </div>
+    </div>
+
+    <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+
+    <!-- Image Lightbox (only for images without data-repo/data-link) -->
+    <div id="lightbox" class="lightbox" aria-modal="true" role="dialog" aria-label="Image viewer">
+        <button class="lb-btn close" aria-label="Close">×</button>
+        <button class="lb-btn prev" aria-label="Previous">‹</button>
+        <button class="lb-btn next" aria-label="Next">›</button>
+        <figure class="lb-figure">
+            <img src="" alt="" />
+            <figcaption class="caption"></figcaption>
+        </figure>
+    </div>
+
+
+    <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="#home" class="footer" aria-label="0xDARK">
+                    <img src="assets/0xDarkX.png" alt="0xDARK — Cyber Security Analyst" />
+                </a>
+            </div>
+            <div class="footer_nav">
+                <nav class="footer-nav" aria-label="Footer">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#ctia">CTIA Reports</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook" class="social-btn"><i class="ri-facebook-fill"></i></a>
+                <a href="#" aria-label="YouTube" class="social-btn"><i class="ri-youtube-fill"></i></a>
+                <a href="#" aria-label="LinkedIn" class="social-btn"><i class="ri-linkedin-fill"></i></a>
+                <a href="#" aria-label="GitHub" class="social-btn"><i class="ri-github-fill"></i></a>
+
+                <a href="assets/YourName_CV.pdf" aria-label="Download CV" class="social-btn" download><i class="ri-file-download-fill"></i></a>
+            </div>
+
+            <p class="footer-copy">© <span id="year"></span> <strong>0xDARK</strong>. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
