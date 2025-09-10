@@ -263,6 +263,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+
+
+    function closePdfViewer() {
+        if (!pdfViewer) return;
+        pdfViewer.classList.remove('open');
+        document.body.style.overflow = '';
+
+        // Clear iframe and notices
+        if (pdfFrame) pdfFrame.src = '';
+        var n = qs('.pdf-notice', pdfViewer);
+        if (n) n.remove();
+
+        // NEW: restore document title and remove #pdf=… from URL
+        setPdfDocTitle(null);
+        clearPdfHash();
+    }
+
+
+
     // Close interactions
     function closePdfViewer() {
         if (!pdfViewer) return;
@@ -278,11 +297,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // CTI: open viewer with summary (cover + custom CTA)
     qsa('.masonry .item img[data-link]').forEach(function(img) {
+        var fallback = img.getAttribute('src');
         var link = img.getAttribute('data-link');
         var summary = img.getAttribute('data-summary') || '';
         var tags = img.getAttribute('data-tags') || '';
         var cover = img.getAttribute('data-cover') || '';
-        var fallback = img.getAttribute('src');
         var cta = img.getAttribute('data-cta') || 'Open PDF';
 
         var overlay = img.closest('.item') ? qs('.overlay', img.closest('.item')) : null;
@@ -301,7 +320,9 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             openPdfViewer(link, img.alt || 'CTI Report', summary, tags, cover, fallback, cta);
         });
+
     });
+
 
     // Projects → GitHub
     qsa('.masonry .item img[data-repo]').forEach(function(img) {

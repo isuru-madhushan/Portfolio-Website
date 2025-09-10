@@ -135,7 +135,7 @@
                 <div class="socials">
                     <a href="https://www.linkedin.com/in/isuru-madhushan/" aria-label="LinkedIn" class="social-btn" target="_blank"><i class="ri-linkedin-fill"></i></a>
                     <a href="https://github.com/isuru-madhushan" aria-label="GitHub" class="social-btn" target="_blank"><i class="ri-github-fill"></i></a>
-                    <a href="https://tryhackme.com/p/0xDarkX" aria-label="TryHackMe" class="social-btn" target="_blank"><i class="fi-xnsuxl-tryhackme"></i></a>
+                    <a href="https://tryhackme.com/p/0xDarkX" aria-label="TryHackMe" class="social-btn" target="_blank"><img src="assets/Tryhackme.svg" alt="TryHackMe" class="thm-icon"></a>
                     <!--<a href="https://app.hackthebox.com/profile/2012771" aria-label="Hack The Box" target="_blank">Hack The Box</a>-->
                 </div>
             </div>
@@ -160,24 +160,77 @@
                     into clear prioritized remediation strategies that drive action. Currently pursuing a Bachelor's degree in Computer Networks and Cybersecurity at KIU, I am deeply passionate about protecting digital systems and infrastructures from
                     evolving threats. My experience spans hands on cybersecurity labs, CTF competitions and realistic network simulations. I’m eager to contribute my technical skills, analytical mindset and commitment to continuous learning to a forward-thinking
                     security team.</p>
-                <ul class="badges">
-                    <li>Pen Testing</li>
-                    <li>Threat Hunting</li>
-                    <li>Incident Response</li>
-                    <li>XDR (Stellar Cyber)</li>
-                    <li>EDR (Crowdstrike)</li>
-                    <li>SIEM (LogRhythm/Fortisiem)</li>
-                    <li>Python</li>
-                    <li>MITRE ATT&CK</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-                <div class="stats">
-                    <div><strong>2+</strong><span>Months in Security</span></div>
-                    <div><strong>0+</strong><span>Engagements</span></div>
-                    <div><strong>5</strong><span>Certifications</span></div>
+                <!-- Attractive grouped topics -->
+                <h3 class="subhead stats-title"><i class="ri-code-s-slash-line"></i> skills</h3>
+                <div class="about-panels">
+
+                    <section class="info-card">
+                        <div class="info-head"><span class="info-ico ri-shield-check-line"></span> Security domains</div>
+                        <ul class="info-list">
+                            <li>Pen Testing</li>
+                            <li>Threat Hunting</li>
+                            <li>Incident Response</li>
+                            <li>Monitoring</li>
+                        </ul>
+                    </section>
+
+                    <section class="info-card">
+                        <div class="info-head"><span class="info-ico ri-tools-line"></span> Tools & platforms</div>
+                        <ul class="info-list">
+                            <li>Stellar Cyber</li>
+                            <li>CrowdStrike</li>
+                            <li>FortiSIEM</li>
+                            <li>LogRhythm</li>
+                            <li>Windows</li>
+                            <li>Linux</li>
+                        </ul>
+                    </section>
+
+                    <section class="info-card">
+                        <div class="info-head"><span class="info-ico ri-code-s-slash-line"></span> Languages</div>
+                        <ul class="info-list">
+                            <li>Python</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </section>
+
+                    <section class="info-card">
+                        <div class="info-head"><span class="info-ico ri-flow-chart"></span> Frameworks & standards</div>
+                        <ul class="info-list">
+                            <li>MITRE ATT&CK</li>
+                        </ul>
+                    </section>
                 </div>
+
+                <h3 class="subhead stats-title"><i class="ri-pie-chart-2-line"></i> Quick stats</h3>
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="stat-ico"><i class="ri-timer-line"></i></div>
+                        <div class="val">
+                            <div class="stat-value">2+</div>
+                            <div class="stat-label">Months in Security</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-ico"><i class="ri-briefcase-line"></i></div>
+                        <div class="val">
+                            <div class="stat-value">0+</div>
+                            <div class="stat-label">Engagements</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-ico"><i class="ri-award-line"></i></div>
+                        <div class="val">
+                            <div class="stat-value">5</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -310,12 +363,12 @@
             <div class="masonry">
                 <article class="box" data-category="malware">
                     <div class="item">
-                        <img src="assets/reports/img/img 1.png" data-link="https://drive.google.com/file/d/1zegg0MEtW3a9xj0oyG6p_u7uVIl128mU" data-cover="assets/reports/img/img 1.png" data-summary="Attack paths across IAM roles, S3, and EC2 metadata.|Over‑privileged roles allow pivot to S3.|EC2 IMDSv1 exposure aids credential theft.|Mitigation & detections included."
-                            data-tags="Cloud, IAM, S3, EC2, MITRE TA0004" data-cta="Open PDF" alt="Cloud Attack Paths" loading="lazy" decoding="async" />
+                        <img src="assets/reports/img/img_2.jpg" data-link="https://drive.google.com/file/d/1zegg0MEtW3a9xj0oyG6p_u7uVIl128mU" alt="Hackers Use .PIF Files and UAC Bypass to Drop Remcos Malware on Windows" data-cover="assets/reports/img/img_2.jpg" data-summary="A newly identified multitarget phishing campaign has been identified that delivers the infamous Remcos Remote Access Trojan (RAT) via the usage of outdated file formats and evasion methods in Windows files. The attack chain originates with phishing emails with malicious archives. These archives contain an executable file labeled as “FAKTURA” which facilitates the deployment of the DBatLoader malware into the target computer. "
+                            data-tags="Malware,07 July 2025" data-cta="Executive Summary" loading="lazy" decoding="async" />
                         <div class="overlay"></div>
                     </div>
                     <div class="project-title" data-category="red">
-                        <p>loud Attack Paths</p>
+                        <p>Hackers Use .PIF Files and UAC Bypass to Drop Remcos Malware on Windows</p>
                     </div>
                 </article>
                 <article class="box" data-category="malware">
@@ -448,16 +501,14 @@
             <div class="pdf-header">
                 <span class="pdf-title">CTI Report</span>
                 <div class="pdf-actions">
-                    <a id="pdfOpenTab" class="icon-btn" target="_blank" title="Open in new tab" aria-label="Open in new tab">
-                        <i class="ri-external-link-line"></i>
-                    </a>
+
                     <button id="pdfClose" class="icon-btn" title="Close" aria-label="Close viewer">
-            <i class="ri-close-line"></i>
-          </button>
+                    <i class="ri-close-line"></i>
+                    </button>
                 </div>
             </div>
             <iframe id="pdfFrame" src="" title="PDF file" loading="lazy"></iframe>
-            <!-- Summary/notice content is injected here by JS as .pdf-notice -->
+
         </div>
     </div>
 
@@ -477,11 +528,6 @@
 
 
     <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
-
-
-
-
-
 
 
     <!-- Footer -->
